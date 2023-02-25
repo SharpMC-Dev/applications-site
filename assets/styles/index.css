@@ -1,0 +1,220 @@
+@import url(./branding.css);
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.hidden {
+  display: none !important;
+}
+
+::-webkit-scrollbar {
+  max-width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #2d2d2d;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+  border-radius: var(--border-radius);
+}
+
+/* CONTAINER */
+.container {
+  background-color: var(--background);
+  /* background-image: url('../images/etc/bg.png'); */
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-origin: 0 0;
+  background-repeat: repeat-y; */
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.mid {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+.mid img {
+  max-width: 150px;
+}
+
+.hero {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: auto;
+  margin-left: auto;
+  align-content: center;
+}
+
+.title {
+  font-weight: 300;
+  font-size: 40pt;
+}
+
+.subtitle {
+  max-width: 80%;
+  font-size: 16pt;
+  font-weight: 100;
+  text-transform: none;
+  opacity: var(--text-fade-opacity);
+}
+
+.open .application-closed {
+  display: none;
+}
+
+.closed .application-button {
+  display: none;
+}
+
+.applications {
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  /* gap: 5%; */
+}
+
+.application {
+  min-width: 350px;
+  width: 50%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var(--background-lighter);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  filter: var(--base-drop-shadow);
+}
+
+/* .application:hover {
+  transition: all 0.5s;
+  background-color: var(--brand-color-dark);
+}
+
+.application:not(:hover) {
+  transition: all 0.5s;
+  background-color: var(--background-lighter);
+} */
+
+.application-title {
+  width: 100%;
+  display: flex;
+  gap: 5%;
+  font-size: 16pt;
+  align-items: center;
+  justify-content: center;
+}
+
+.application-info {
+  font-size: 12pt;
+  font-weight: 100;
+  text-transform: none;
+  /* opacity: var(--text-fade-opacity); */
+}
+
+.application-closed {
+  font-size: 12pt;
+  font-weight: 100;
+  text-transform: none;
+  background-color: var(--disclaimer);
+  padding: 10px;
+  border-radius: var(--border-radius);
+}
+
+.open .application-status {
+  background-color: var(--green);
+  padding: 5px 15px;
+  border-radius: var(--border-radius);
+}
+
+.closed .application-status {
+  background-color: var(--red-faded);
+  padding: 5px 15px;
+  border-radius: var(--border-radius);
+}
+
+.application-button {
+  background-color: var(--brand-color);
+  padding: 15px 50px;
+  border-radius: var(--border-radius);
+  filter: var(--base-drop-shadow);
+}
+
+/* .application:hover .application-button {
+  transition: background-color 0.6s;
+  background-color: var(--background-lighter);
+} */
+
+.application-button:hover {
+  transition: all 0.5s;
+  cursor: pointer;
+  background-color: var(--brand-color-dark);
+}
+
+.application-button:not(:hover) {
+  transition: all 0.5s;
+  cursor: pointer;
+  background-color: var(--brand-color);
+}
+
+.requirements {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  align-items: center;
+  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: 1;
+  gap: 10px;
+}
+
+.requirements-title {
+  opacity: 1 !important;
+  font-size: 16pt;
+  color: white;
+}
+
+.requirements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.requirements-list span {
+  font-size: 12pt;
+  text-transform: none;
+  font-weight: 100;
+}
